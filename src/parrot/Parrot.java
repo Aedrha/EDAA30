@@ -22,6 +22,15 @@ public class Parrot {
             default -> throw new RuntimeException("Should be unreachable");
         };
     }
+    
+    public String getHabitation() {
+    	return switch (type) {
+    	case EUROPEAN -> "In a nest made of sticks.";
+    	case AFRICAN -> "In holes in trees.";
+    	case NORWEGIAN_BLUE -> (isNailed) ? "In a cage." : "Nowhere.";
+    	default -> throw new RuntimeException("This should not happen.");
+    	};
+    } 
 
     private double getBaseSpeed(double voltage) {
         return Math.min(24.0, voltage * getBaseSpeed());

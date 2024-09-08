@@ -54,4 +54,26 @@ public class ParrotTest {
         Parrot parrot = getParrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4, false);
         assertEquals(24.0, parrot.getSpeed(), 0.0);
     }
+    @Test
+    public void getHabitationOfEuropeanParrot() {
+    	Parrot parrot = getParrot(ParrotTypeEnum.EUROPEAN, 0, 0, false);
+    	assertEquals("In a nest made of sticks.",parrot.getHabitation());
+    }
+    
+    @Test
+    public void getHabitationOfAfricanParrot() {
+    	Parrot parrot = getParrot(ParrotTypeEnum.AFRICAN, 0, 0, false);
+    	assertEquals("In holes in trees.",parrot.getHabitation());
+    }
+    @Test
+    public void getHabitationNorwegianBlueParrot_nailed() {
+        Parrot parrot = getParrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 1.5, true);
+        assertEquals("In cages.",parrot.getHabitation());
+    }
+
+    @Test
+    public void getHabitationNorwegianBlueParrot_not_nailed() {
+        Parrot parrot = getParrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 1.5, false);
+        assertEquals("Nowhere.",parrot.getHabitation());
+    }
 }

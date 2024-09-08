@@ -27,7 +27,7 @@ public class Parrot {
     	return switch (type) {
     	case EUROPEAN -> "In a nest made of sticks.";
     	case AFRICAN -> "In holes in trees.";
-    	case NORWEGIAN_BLUE -> (isNailed) ? "In a cage." : "Nowhere.";
+    	case NORWEGIAN_BLUE -> (isNailed) ? "In cages." : "Nowhere.";
     	default -> throw new RuntimeException("This should not happen.");
     	};
     } 

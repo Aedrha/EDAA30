@@ -1,6 +1,10 @@
 package test;
 
 import org.junit.Test;
+
+import parrot.AfricanParrot;
+import parrot.EuropeanParrot;
+import parrot.Norwegian_Blue;
 import parrot.Parrot;
 import parrot.ParrotTypeEnum;
 
@@ -9,7 +13,12 @@ import static org.junit.Assert.assertEquals;
 public class ParrotTest {
 
     private static Parrot getParrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
-        return new Parrot(type, numberOfCoconuts, voltage, isNailed);
+    	return switch (type) {
+    	case EUROPEAN -> new EuropeanParrot();
+    	case AFRICAN -> new AfricanParrot(numberOfCoconuts);
+    	case NORWEGIAN_BLUE -> new Norwegian_Blue(voltage, isNailed);
+    	default -> throw new RuntimeException("This should not happen.");
+    	};
     }
 
 

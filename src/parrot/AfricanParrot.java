@@ -1,22 +1,16 @@
 package parrot;
 
-public class AfricanParrot extends Parrot {
-	private int numberOfCoconuts;
+public record AfricanParrot(int nbrCoconuts) implements Parrot {
 	
-	public AfricanParrot(int nbrCoconuts) {
-		this.habitation = "In holes in trees.";
-		this.numberOfCoconuts = nbrCoconuts;
-		this.type = ParrotTypeEnum.AFRICAN;
-	}
 	
-	@Override
+
+	
 	public double getSpeed() {
-		return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+		return Math.max(0, 12 - getLoadFactor() * nbrCoconuts);
 	}
 	
-    @Override
     public String getHabitation() {
-    	return habitation;
+    	return "In holes in trees.";
     }
 	
 	   private double getLoadFactor() {

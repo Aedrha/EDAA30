@@ -5,13 +5,13 @@ public record EuropeanParrot() implements Parrot {
 	@Override
 	public double getSpeed() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 12;
 	}
 
 	@Override
 	public String getHabitation() {
 		// TODO Auto-generated method stub
-		return null;
+		return "In a nest made of sticks.";
 	}
 
 

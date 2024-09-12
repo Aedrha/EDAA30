@@ -1,23 +1,19 @@
 package parrot;
 
-public class EuropeanParrot extends Parrot {
-	
-	
-	public EuropeanParrot() {
-		super();
-		this.habitation = "In a nest made of sticks.";
-		this.type = ParrotTypeEnum.EUROPEAN;
-		// TODO Auto-generated constructor stub
-	}
-    
-	@Override
-    public double getSpeed() {
-        return getBaseSpeed();
-    }
-    @Override
-    public String getHabitation() {
-    	return habitation;
-    }
+public record EuropeanParrot() implements Parrot {
 
-	
+	@Override
+	public double getSpeed() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getHabitation() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
 }

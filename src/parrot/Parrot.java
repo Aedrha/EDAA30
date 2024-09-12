@@ -1,23 +1,10 @@
 package parrot;
 
-public class Parrot {
+interface Parrot {
 
-    protected ParrotTypeEnum type;
-    protected String habitation;
+    public double getSpeed() ;
+    public String getHabitation();
 
-    public Parrot() {
-    }
-
-    public double getSpeed() {
-    	return 0;
-    }
-
-    public String getHabitation() {
-    	return "";
-    }
-    protected double getBaseSpeed() {
-        return 12.0;
-    }
 
 }
 

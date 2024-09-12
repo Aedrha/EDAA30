@@ -6,7 +6,7 @@ public record AfricanParrot(int nbrCoconuts) implements Parrot {
 
 	
 	public double getSpeed() {
-		return Math.max(0, 12 - getLoadFactor() * nbrCoconuts);
+		return Math.max(0, getBaseSpeed() - getLoadFactor() * nbrCoconuts);
 	}
 	
     public String getHabitation() {
